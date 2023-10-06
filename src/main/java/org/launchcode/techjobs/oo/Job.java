@@ -88,6 +88,33 @@ public class Job {
     public int hashCode() {
         return Objects.hash(id);
     }
+    public String toString(){
+        String dataNotAvailable = "Data is not available";
+        String aEmployer = this.employer.toString();
+        if (aEmployer == null || aEmployer == ""){
+            aEmployer = dataNotAvailable;
+        }
+        String aLocation = this.location.toString();
+        if (aLocation == null || aLocation == ""){
+            aLocation = dataNotAvailable;
+        }
+        String aPositionType = this.positionType.toString();
+        if(aPositionType == null || aPositionType == ""){
+            aPositionType = dataNotAvailable;
+        }
+        String aCoreCompetency = this.coreCompetency.toString();
+        if (aCoreCompetency == null || aCoreCompetency == ""){
+            aCoreCompetency = dataNotAvailable;
+        }
+//        String aName = name;
+//        if (aName == null || aName == ""){
+//            aName = dataNotAvailable;
+//        }
+        return System.lineSeparator() + "ID:" + this.id + System.lineSeparator() + "Name:" + this.name + System.lineSeparator()
+                + "Employer:" + aEmployer + System.lineSeparator() + "Location:" + aLocation + System.lineSeparator() + "Position Type:" + aPositionType +
+                System.lineSeparator() + "Core Competency:" + aCoreCompetency + System.lineSeparator();
+
+    }
 
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
