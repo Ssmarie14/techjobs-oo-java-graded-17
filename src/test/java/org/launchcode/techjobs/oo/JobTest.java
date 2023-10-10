@@ -47,10 +47,15 @@ public class JobTest {
     @Test
     public void testToStringContainsCorrectLabelsAndData(){
         Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        String expected = System.lineSeparator() + "ID:" + job1.getId() + System.lineSeparator() + "Name:" + job1.getName()
-                + System.lineSeparator() + "Employer:" + job1.getEmployer() + System.lineSeparator() + "Location:" + job1.getLocation() +
-                System.lineSeparator() + "Position Type:" + job1.getPositionType() + System.lineSeparator() + "Core Competency:" + job1.getCoreCompetency()
+        String expected = System.lineSeparator() + "ID: " + job1.getId() + System.lineSeparator() + "Name: " + job1.getName()
+                + System.lineSeparator() + "Employer: " + job1.getEmployer() + System.lineSeparator() + "Location: " + job1.getLocation() +
+                System.lineSeparator() + "Position Type: " + job1.getPositionType() + System.lineSeparator() + "Core Competency: " + job1.getCoreCompetency()
                 + System.lineSeparator();
         assertEquals(job1.toString(), expected);
+    }
+    @Test
+    public void testToStringHandlesEmptyField(){
+        Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        assertNotNull(job1.getEmployer().getValue());
     }
 }

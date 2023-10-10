@@ -89,7 +89,7 @@ public class Job {
         return Objects.hash(id);
     }
     public String toString(){
-        String dataNotAvailable = "Data is not available";
+        String dataNotAvailable = "Data not available";
         String aEmployer = this.employer.toString();
         if (aEmployer == null || aEmployer == ""){
             aEmployer = dataNotAvailable;
@@ -110,9 +110,9 @@ public class Job {
 //        if (aName == null || aName == ""){
 //            aName = dataNotAvailable;
 //        }
-        return System.lineSeparator() + "ID:" + this.id + System.lineSeparator() + "Name:" + this.name + System.lineSeparator()
-                + "Employer:" + aEmployer + System.lineSeparator() + "Location:" + aLocation + System.lineSeparator() + "Position Type:" + aPositionType +
-                System.lineSeparator() + "Core Competency:" + aCoreCompetency + System.lineSeparator();
+        return System.lineSeparator() + "ID: " + this.id + System.lineSeparator() + "Name: " + this.name + System.lineSeparator()
+                + "Employer: " + aEmployer + System.lineSeparator() + "Location: " + aLocation + System.lineSeparator() + "Position Type: " + aPositionType +
+                System.lineSeparator() + "Core Competency: " + aCoreCompetency + System.lineSeparator();
 
     }
 
